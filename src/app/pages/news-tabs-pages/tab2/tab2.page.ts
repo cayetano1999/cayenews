@@ -1,5 +1,5 @@
 import { Component, ViewChild, OnInit, Output, EventEmitter } from '@angular/core';
-import { IonSegment } from '@ionic/angular';
+import { IonSegment, ToastController } from '@ionic/angular';
 import { Articles } from 'src/app/core/interfaces/news-response';
 import { Segment } from 'src/app/core/interfaces/segment';
 import { NewsApiService } from '../../../core/services/news-api/news-api.service';
@@ -10,8 +10,9 @@ import { NewsApiService } from '../../../core/services/news-api/news-api.service
   styleUrls: ['./tab2.page.scss']
 })
 export class Tab2Page implements OnInit {
+  page: number = 1;
   
-  constructor(private newsApiService: NewsApiService) {
+  constructor(private newsApiService: NewsApiService, private toastController: ToastController) {
     
   }
   
@@ -85,6 +86,29 @@ export class Tab2Page implements OnInit {
     console.log(item);
     this.defaultSegment = item.name;
     this.getByCountryAndCategory();
+  }
+
+  getAllToScroll(event) {
+    this.page++;
+      this.newsApiService.getByCountryAndCategory('us',  this.defaultSegment, this.page).subscribe(r => {
+        debugger;
+        if (r.articles.length == 0) {
+          event.target.disabled = true;
+          this.presentToast('All news has been displayed')
+        }
+        else {
+          this.news.push(...r.articles);
+          event.target.complete();
+        }
+      });
+  }
+
+  async presentToast(message: string) {
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 2000
+    });
+    toast.present();
   }
 
 }

@@ -7,5 +7,16 @@
 
   <app-news-card [news]="news"></app-news-card>
 
+  <ion-infinite-scroll
+    threshold="100px"
+    position="bottom"
+    (ionInfinite)="getAllToScroll($event)"
+  >
+    <ion-infinite-scroll-content
+      loadingSpinner="crescent"
+      loadingText="Loading more news..."
+    >
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
   <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>
