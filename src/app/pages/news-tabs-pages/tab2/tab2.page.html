@@ -1,17 +1,23 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header title="Encabezados" [showBackButton]="true"> </app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-segment
+    scrollable
+    [value]="defaultSegment"
+    mode="md"
+    color="primary"
+    (ionChange)="segmentChanged($event)"
+  >
+    <ion-segment-button
+      *ngFor="let item of segments"
+      mode="md"
+      [value]="item.name"
+    >
+      <ion-label>
+        <ion-icon slot="start" [name]="item.icon"></ion-icon>
+        {{item.display}}</ion-label>
+    </ion-segment-button>
+  </ion-segment>
 
   <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
 </ion-content>

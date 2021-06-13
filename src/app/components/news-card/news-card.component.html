@@ -8,7 +8,7 @@
     </ion-card-subtitle>
     <ion-card-title>{{ news?.title }} </ion-card-title>
   </ion-card-header>
-  <ion-img [src]="news?.urlToImage"></ion-img>
+  <ion-img *ngIf="news?.urlToImage" [src]="news?.urlToImage"></ion-img>
   <ion-card-content class="ion-no-margin">
     {{ news?.description }}
 
