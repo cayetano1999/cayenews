@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsResponse } from 'src/app/core/interfaces/news-response';
 import { NewsApiService } from '../../../core/services/news-api/news-api.service';
+import { Articles } from '../../../core/interfaces/news-response';
 
 @Component({
   selector: 'app-tab1',
@@ -8,11 +9,12 @@ import { NewsApiService } from '../../../core/services/news-api/news-api.service
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit {
+  filter: string = '';
 
   constructor(private newsApiService: NewsApiService) {
 
   }
-  news: NewsResponse;
+  news: Articles[];
   ngOnInit(): void {
     this.getAllNews();
   }
@@ -20,10 +22,19 @@ export class Tab1Page implements OnInit {
   getAllNews(){
     this.newsApiService.getByCountry('us').subscribe(response=> {
       if(response.status == 'ok'){
-        this.news = response;
+        this.news = response.articles;
         console.log(this.news);
       }
     });
+  }
+
+  doRefresh(event){
+
+  }
+
+  onSearchChange(event){
+    this.filter = event.detail.value;
+
   }
 
 }

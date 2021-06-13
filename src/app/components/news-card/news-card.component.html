@@ -1,0 +1,33 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>
+      <ion-badge color="dark" mode="ios">
+        <span color="primary">{{ index + 1 }}</span> -
+        {{ news?.source?.name }} - {{ news?.publishedAt | date }}</ion-badge
+      >
+    </ion-card-subtitle>
+    <ion-card-title>{{ news?.title }} </ion-card-title>
+  </ion-card-header>
+  <ion-img [src]="news?.urlToImage"></ion-img>
+  <ion-card-content class="ion-no-margin">
+    {{ news?.description }}
+
+    <div class="row">
+      <div style="text-align: center !important" class="mt-3">
+        <ion-buttons slot="icon-only">
+          <ion-button (click)="onClick()">
+            <ion-icon name="star-outline"></ion-icon>
+          </ion-button>
+
+          <ion-button (click)="onClick()">
+            <ion-icon name="share-social-outline"></ion-icon>
+          </ion-button>
+
+          <ion-button (click)="onClick()">
+            <ion-icon name="eye-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+    </div>
+  </ion-card-content>
+</ion-card>
