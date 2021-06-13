@@ -4,32 +4,8 @@
   <ion-refresher color="light" slot="fixed" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
-  <ion-grid fixed>
-    <ion-row>
-      <ion-col size="12">
-        <ion-searchbar
-          placeholder="Buscar Noticias"
-          inputmode="text"
-          type="text"
-          (ionChange)="onSearchChange($event)"
-          [debounce]="250"
-        ></ion-searchbar>
-      </ion-col>
-    </ion-row>
 
-    <ion-row>
-      <ion-col
-        *ngFor="let item of news | filterPipe:filter:'title'; let i = index "
-        size-xs="12"
-        size-lg="4"
-        size-lg="4"
-        size-md="2"
-        size-sm="12"
-      >
-        <app-news-card [news]="item" [index]="i"></app-news-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <app-news-card [news]="news"></app-news-card>
 
   <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
 </ion-content>

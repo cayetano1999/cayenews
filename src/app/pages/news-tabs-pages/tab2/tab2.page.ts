@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit, Output, EventEmitter } from '@angular/core';
 import { IonSegment } from '@ionic/angular';
 import { Articles } from 'src/app/core/interfaces/news-response';
 import { Segment } from 'src/app/core/interfaces/segment';
@@ -78,6 +78,11 @@ export class Tab2Page implements OnInit {
   onSearchChange(event){
     this.filter = event.detail.value;
 
+  }
+
+  getSegment(item: Segment){
+    console.log(item);
+    this.getByCountryAndCategory(item.name);
   }
 
 }
