@@ -15,8 +15,8 @@ export class NewsApiService {
   routes = {
     country: '?country=',
     apiKey: '&apiKey=',
-    getNewsByCountry: (country: string) => `${this.apiUrl}?country=${country}&apiKey=${this.apiKey}`,
-    getNewsByCountryAndCategory: (country: string, category:string) => `${this.apiUrl}?country=${country}&category=${category}&apiKey=${this.apiKey}`,
+    getNewsByCountry: (country: string, page: number) => `${this.apiUrl}?country=${country}&apiKey=${this.apiKey}&page=${page}`,
+    getNewsByCountryAndCategory: (country: string, category:string, page: number) => `${this.apiUrl}?country=${country}&category=${category}&apiKey=${this.apiKey}&page=${page}`,
 
 
   }
@@ -26,12 +26,12 @@ export class NewsApiService {
 
   }
 
-  getByCountry(country: string): Observable<NewsResponse> {
-    return this.httpClient.get<NewsResponse>(this.routes.getNewsByCountry(country));
+  getByCountry(country: string, page: number): Observable<NewsResponse> {
+    return this.httpClient.get<NewsResponse>(this.routes.getNewsByCountry(country, page));
   }
 
-  getByCountryAndCategory(country: string, category: string): Observable<NewsResponse> {
-    return this.httpClient.get<NewsResponse>(this.routes.getNewsByCountryAndCategory(country, category));
+  getByCountryAndCategory(country: string, category: string, page: number): Observable<NewsResponse> {
+    return this.httpClient.get<NewsResponse>(this.routes.getNewsByCountryAndCategory(country, category,page));
   }
 
 }

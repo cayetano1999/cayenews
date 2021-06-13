@@ -19,20 +19,25 @@ export class Tab1Page implements OnInit {
     this.getAllNews();
   }
 
-  getAllNews(){
-    this.newsApiService.getByCountry('us').subscribe(response=> {
-      if(response.status == 'ok'){
+  getAllNews(ev?) {
+    this.newsApiService.getByCountry('us', 1).subscribe(response => {
+      if (response.status == 'ok') {
         this.news = response.articles;
         console.log(this.news);
+        ev?.target?.complete();
       }
     });
   }
 
-  doRefresh(event){
+  doRefresh(ev) {
+    this.getAllNews(ev);
+  }
+
+  refreshAllNews(){
 
   }
 
-  onSearchChange(event){
+  onSearchChange(event) {
     this.filter = event.detail.value;
 
   }

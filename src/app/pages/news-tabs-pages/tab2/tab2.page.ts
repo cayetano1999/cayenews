@@ -66,12 +66,13 @@ export class Tab2Page implements OnInit {
   }
 
   doRefresh(event){
-
+    this.getByCountryAndCategory(event);
   }
 
-  getByCountryAndCategory(category: string){
-    this.newsApiService.getByCountryAndCategory('us', category).subscribe(response=> {
+  getByCountryAndCategory(ev?){
+    this.newsApiService.getByCountryAndCategory('us', this.defaultSegment, 1).subscribe(response=> {
       this.news = response.articles;
+      ev?.target?.complete();
     })
   }
 
@@ -82,7 +83,8 @@ export class Tab2Page implements OnInit {
 
   getSegment(item: Segment){
     console.log(item);
-    this.getByCountryAndCategory(item.name);
+    this.defaultSegment = item.name;
+    this.getByCountryAndCategory();
   }
 
 }
