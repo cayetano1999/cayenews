@@ -7,6 +7,7 @@ import { ToastControllerService } from 'src/app/core/services/ionic-components/t
 import { Storage } from '@ionic/storage'
 import { DataLocalService } from 'src/app/core/services/data-local/data-local.service';
 import { AlertControllerService } from 'src/app/core/services/ionic-components/alert-controller.service';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-news-card',
@@ -22,8 +23,10 @@ export class NewsCardComponent implements OnInit {
   favoritesNews: Articles[];
   @Input() favorites: boolean = true;
   @Output() addFavorite = new EventEmitter();
+  @Output() clearFavoritesEvent = new EventEmitter();
 
-  constructor(private iab: InAppBrowser, private socialShared: SocialSharing, private toastService: ToastControllerService, private dataLocalService: DataLocalService, private alertService: AlertControllerService) { }
+
+  constructor(private actionSheet: ActionSheetController, private iab: InAppBrowser, private socialShared: SocialSharing, private toastService: ToastControllerService, private dataLocalService: DataLocalService, private alertService: AlertControllerService) { }
 
   async ngOnInit() {
     this.dataLocalService.create();
@@ -62,13 +65,48 @@ export class NewsCardComponent implements OnInit {
   isFavorite(item: Articles) {
     debugger;
     let value = false
-    if(this.favoritesNews){
-      let exist = this.favoritesNews.filter(e=> e.title == item.title).length > 0;
-      if(exist){
+    if (this.favoritesNews) {
+      let exist = this.favoritesNews.filter(e => e.title == item.title).length > 0;
+      if (exist) {
         value = true;
       }
-      
+
     }
     return value;
   }
+
+  async showOptions(t) {
+    const actionSheet = await this.actionSheet.create({
+      header: 'Options',
+      cssClass: 'my-custom-class',
+      backdropDismiss: false,
+      translucent: true,
+      animated: true,
+
+      buttons: [{
+        text: 'Remove all news',
+        role: 'destructive',
+        icon: 'trash',
+        cssClass: 'rojo',
+        handler: () => {
+          this.clearFavorites();
+        }
+      },
+      ]
+    });
+    await actionSheet.present();
+
+    const { role } = await actionSheet.onDidDismiss();
+    console.log('onDidDismiss resolved with role', role);
+  }
+
+  async clearFavorites(){
+    await this.dataLocalService.clear();
+    this.news = [];
+    this.toastService.showToastSuccess('Done!!');
+    this.clearFavoritesEvent.emit({deleted: true});
+  }
+
 }
+
+

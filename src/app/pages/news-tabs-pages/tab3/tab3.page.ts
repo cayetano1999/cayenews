@@ -20,6 +20,9 @@ export class Tab3Page implements OnInit {
 
   async getFavoritos() {
     this.news  = await this.dataLocalService.getNews();
+    if(!this.news){
+      this.news = [];
+    }
   }
 
   doRefresh(ev) {
@@ -41,6 +44,11 @@ export class Tab3Page implements OnInit {
       // this.getFavoritos();
 
     }, '¿Are you sure?', 'This item will be deleted', 'Yes, I am sure');
+  }
+
+  async clearFavorites(event){
+    console.log('Se limpió la db');
+     await this.getFavoritos(); 
   }
 
 

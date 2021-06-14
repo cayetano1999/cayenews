@@ -44,7 +44,10 @@ export class DataLocalService {
   }
 
   create() {
-
     this.storage.create();
+  }
+
+  async clear() {
+    return await this.storage.clear();
   }
 }

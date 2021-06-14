@@ -1,10 +1,13 @@
 <app-header title="Tus Favoritos" [showBackButton]="true"> </app-header>
 
-<ion-content [fullscreen]="true" class="animate__animated animate__bounceInLeft">
-
+<ion-content
+  [fullscreen]="true"
+  class="animate__animated animate__bounceInLeft"
+>
   <ion-refresher color="light" slot="fixed" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
+
 
   <!-- <app-errors 
    message="La consulta no fue exitosa a causa de un error externo, intente en varios minutos." 
@@ -13,7 +16,12 @@
 
   </app-errors> -->
 
-  <app-news-card [favorites]="true"  (newsToDelete)="deleteNews($event)" [news]="news"></app-news-card>
+  <app-news-card
+    [favorites]="true"
+    (newsToDelete)="deleteNews($event)"
+    (clearFavoritesEvent)="clearFavorites($event)"
+    [news]="news"
+  ></app-news-card>
 
   <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
 </ion-content>
