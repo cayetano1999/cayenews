@@ -16,33 +16,31 @@ export class DataLocalService {
 
   }
 
-  saveNews(article: Articles) {
+  async saveNews(article: Articles) {
     const exist = this.news.filter(n => n == article).length > 0;
     if (!exist) {
       this.news.unshift(article);
-      this.storage.set('favoritos', this.news).then(r=> {
-        this.toast.showToastSuccess('this news has been added to favorites');
-      });
+      await this.storage.set('favoritos', this.news);
+      this.toast.showToastSuccess('this news has been added to favorites');
     }
     else {
       this.toast.showToastWarning('this news already exist in your favorites');
     }
   }
 
-  restartNews(articles: Articles[]) {
-    this.storage.set('favoritos', []).then(r=> {
-      this.storage.set('favoritos', articles);
-    })
+  async restartNews(articles: Articles[]) {
+    await this.storage.set('favoritos', []);
+    await this.storage.set('favoritos', articles);
   }
 
-  getNews() {
-    return this.storage.get('favoritos');
+  async getNews() {
+    return  await this.storage.get('favoritos');
   }
 
-  removeNew(item: Articles) {
+  async removeNew(item: Articles) {
     debugger;
     this.news = this.news.filter(n => n.title != item.title);
-    this.storage.set('favoritos', this.news);
+    await this.storage.set('favoritos', this.news);
   }
 
   create() {

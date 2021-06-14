@@ -13,17 +13,13 @@ export class Tab3Page implements OnInit {
   news: Articles[];
   constructor(private dataLocalService: DataLocalService, private toastService: ToastControllerService, private alertService: AlertControllerService) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
     this.dataLocalService.create();
-    this.getFavoritos();
+    await this.getFavoritos();
   }
 
-  getFavoritos() {
-    this.dataLocalService.getNews().then(r => {
-      debugger;
-      this.news = r;
-    })
-
+  async getFavoritos() {
+    this.news  = await this.dataLocalService.getNews();
   }
 
   doRefresh(ev) {

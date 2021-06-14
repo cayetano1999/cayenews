@@ -21,14 +21,14 @@ export class NewsCardComponent implements OnInit {
   new: Articles
   favoritesNews: Articles[];
   @Input() favorites: boolean = true;
+  @Output() addFavorite = new EventEmitter();
 
   constructor(private iab: InAppBrowser, private socialShared: SocialSharing, private toastService: ToastControllerService, private dataLocalService: DataLocalService, private alertService: AlertControllerService) { }
 
   async ngOnInit() {
     this.dataLocalService.create();
-    await this.dataLocalService.getNews().then(r => {
-      this.favoritesNews = r;
-    })
+    this.favoritesNews = await this.dataLocalService.getNews();
+    console.log('FAVORITOS', this.favoritesNews);
   }
 
   onSearchChange(event) {
@@ -48,8 +48,10 @@ export class NewsCardComponent implements OnInit {
     });
   }
 
-  addToFavorite(item: Articles) {
-    this.dataLocalService.saveNews(item);
+  async addToFavorite(item: Articles) {
+    debugger;
+    await this.dataLocalService.saveNews(item);
+    this.favoritesNews = await this.dataLocalService.getNews();
   }
 
   removeFavorite(item: Articles) {
