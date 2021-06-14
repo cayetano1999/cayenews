@@ -1,0 +1,31 @@
+.slide {
+  background-color: white;
+  height: 100%;
+}
+
+ion-slides {
+  height: 100%;
+}
+
+ion-card {
+  --box-shadow: none !important;
+  box-shadow: none !important;
+  border-radius: 10px !important;
+  //   border: 1px solid rgb(240, 240, 240) !important;
+}
+
+ion-input {
+  border: 1px solid rgb(43, 115, 223) !important;
+  border-radius: 5px !important;
+  padding-left: 10px !important;
+}
+
+ion-item {
+  –highlight-color-focused: none;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }

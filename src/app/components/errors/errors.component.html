@@ -1,9 +1,31 @@
-<div class="slide">
-    <ion-img src="../../../assets/images/errors/500.jpg"></ion-img>
-    <h3 class="text-center" style="margin-top: -50px;">
-      {{title}}
+<div class="slide d-block d-sm-none">
+  <ion-img src="../../../assets/images/errors/500.jpg"></ion-img>
+  <h3 class="text-center" style="margin-top: -50px">
+    {{ title }}
+  </h3>
+  <p class="text-center">
+    {{ message }}
+  </p>
+</div>
+
+<div class="slide d-none d-lg-block">
+  <div class="container">
+    <div class="row">
+      <div class="span4"></div>
+      <div class="span4">
+        <ion-img
+          src="../../../assets/images/errors/500.jpg"
+          class="w-25"
+        ></ion-img>
+      </div>
+      <div class="span4"></div>
+    </div>
+
+    <h3 class="text-center" style="margin-top: -50px">
+      {{ title }}
     </h3>
-      <p class="text-center">
-        {{message}}
-      </p>
+    <p class="text-center">
+      {{ message }}
+    </p>
+  </div>
 </div>

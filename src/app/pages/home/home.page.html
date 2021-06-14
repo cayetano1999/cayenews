@@ -1,0 +1,153 @@
+<ion-header class="ion-no-border">
+  <ion-img src="../../../assets/images/home/top.PNG"  class="d-block d-sm-none"></ion-img>
+</ion-header>
+
+<ion-content>
+  <ion-slides mode="ios" pager="ios" scrollbar="ios">
+    <ion-slide class="slide">
+      <ion-card>
+        
+
+        <div class="container d-block d-sm-none">
+          <div class="row">
+            <div class="span4"></div>
+            <div class="span4"><img
+              class="ion-padding w-75 "
+              src="../../../assets/images/home/logo.png"
+              size="small"
+            /></div>
+            <div class="span4"></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="span4"></div>
+            <div class="span4"><img class="center-block w-25 d-none d-lg-block d-md-block my-3" src="../../../assets/images/home/logo.png" /></div>
+            <div class="span4"></div>
+          </div>
+        </div>
+
+        <ion-card-header>
+          <!-- <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle> -->
+          <ion-card-title>Welcome to CN News</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Una aplicación para ver noticias recientes desde la fuente de
+          newsapi.org. Created by <b class="text-danger">Josue Cayetano</b>.
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide class="slide">
+      <ion-card>
+        <img
+          class="ion-padding w-100 d-block d-sm-none"
+          src="../../../assets/images/home/features.PNG"
+          size="small"
+        />
+
+        <div class="container d-none d-lg-block d-md-block my-3">
+          <div class="row">
+            <div class="span4"></div>
+            <div class="span4"><img class="center-block ion-padding w-50 " src="../../../assets/images/home/features.PNG" /></div>
+            <div class="span4"></div>
+          </div>
+        </div>
+
+
+        <ion-card-header>
+          <!-- <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle> -->
+          <ion-card-title>Features</ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="ion-no-padding text-center">
+          <ion-list lines="none">
+            <ion-item class="ion-no-border">
+              <ion-avatar slot="start">
+                <img src="../../../assets/images/features/seenews.png" />
+              </ion-avatar>
+              <ion-label>
+                <p>See the most recent news</p>
+              </ion-label>
+              <!-- <ion-badge color="success" slot="end">22</ion-badge> -->
+            </ion-item>
+
+            <ion-item class="ion-no-border">
+              <ion-avatar slot="start">
+                <img src="../../../assets/images/features/add.png" />
+              </ion-avatar>
+              <ion-label>
+                <p>Add them to your favorites section and delete them</p>
+              </ion-label>
+              <!-- <ion-badge color="success" slot="end">22</ion-badge> -->
+            </ion-item>
+
+            <ion-item class="ion-no-border">
+              <ion-avatar slot="start">
+                <img src="../../../assets/images/features/share.png" />
+              </ion-avatar>
+              <ion-label>
+                <p>Share the news on your social networks</p>
+              </ion-label>
+              <!-- <ion-badge color="success" slot="end">22</ion-badge> -->
+            </ion-item>
+          </ion-list>
+
+          <h6 class="text-center mt-3">And More...</h6>
+
+          <!-- See the most recent news, add them to your favorites section and
+          delete them, share the news on your social networks, see news from
+          your favorite segment (health, sports, etc.) all this in a single
+          application. -->
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide class="slide">
+      <ion-card>
+        <img
+          class="ion-padding w-25"
+          src="../../../assets/images/features/register.png"
+          size="small"
+        />
+        <ion-card-header>
+          <!-- <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle> -->
+          <ion-card-title>Start Creating An Account</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list lines="none">
+            <ion-item class="mb-3">
+              <!-- <ion-label>Your Name </ion-label> -->
+              <ion-input
+                placeholder="Enter your name here"
+                type="text"
+              ></ion-input>
+            </ion-item>
+
+            <ion-item class="mb-3">
+              <!-- <ion-label position="floating">Your Last Name </ion-label> -->
+              <ion-input
+                placeholder="Enter your last name here"
+                type="text"
+              ></ion-input>
+            </ion-item>
+
+            <ion-item class="mb-3">
+              <!-- <ion-label position="floating">Your Email </ion-label> -->
+              <ion-input
+                placeholder="Enter your email here"
+                type="email"
+              ></ion-input>
+            </ion-item>
+          </ion-list>
+
+          <ion-button (click)="goToTbas()" class="my-3" expand="block" shape="round">
+            Register and Start
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+ 
+</ion-content>
+
