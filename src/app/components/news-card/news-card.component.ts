@@ -8,6 +8,8 @@ import { Storage } from '@ionic/storage'
 import { DataLocalService } from 'src/app/core/services/data-local/data-local.service';
 import { AlertControllerService } from 'src/app/core/services/ionic-components/alert-controller.service';
 import { ActionSheetController } from '@ionic/angular';
+import { UserCN } from 'src/app/core/models/user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-news-card',
@@ -24,14 +26,27 @@ export class NewsCardComponent implements OnInit {
   @Input() favorites: boolean = true;
   @Output() addFavorite = new EventEmitter();
   @Output() clearFavoritesEvent = new EventEmitter();
+  user: UserCN;
+  @Input() showMessage: boolean;
+  isUser: boolean;
 
+  constructor(private router: Router, private actionSheet: ActionSheetController, private iab: InAppBrowser, private socialShared: SocialSharing, private toastService: ToastControllerService, private dataLocalService: DataLocalService, private alertService: AlertControllerService) { }
 
-  constructor(private actionSheet: ActionSheetController, private iab: InAppBrowser, private socialShared: SocialSharing, private toastService: ToastControllerService, private dataLocalService: DataLocalService, private alertService: AlertControllerService) { }
 
   async ngOnInit() {
     this.dataLocalService.create();
     this.favoritesNews = await this.dataLocalService.getNews();
     console.log('FAVORITOS', this.favoritesNews);
+    debugger;
+
+    this.user = await this.dataLocalService.getItem('user');
+    if(this.user){
+      this.isUser = true;
+    }
+    else{
+      this.isUser = false;
+      this.router.navigate(['./home']);
+    }
   }
 
   onSearchChange(event) {
@@ -52,7 +67,7 @@ export class NewsCardComponent implements OnInit {
   }
 
   async addToFavorite(item: Articles) {
-    debugger;
+
     if (!this.favorites) {
       await this.dataLocalService.saveNews(item);
       this.favoritesNews = await this.dataLocalService.getNews();
@@ -65,7 +80,7 @@ export class NewsCardComponent implements OnInit {
   }
 
   isFavorite(item: Articles) {
-    debugger;
+
     let value = false
     if (this.favoritesNews) {
       let exist = this.favoritesNews.filter(e => e.title == item.title).length > 0;

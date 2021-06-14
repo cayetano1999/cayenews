@@ -56,7 +56,7 @@ export class Tab1Page implements OnInit {
   getAllToScroll(event) {
     this.page++;
     this.newsApiService.getByCountry('us', this.page).subscribe(r => {
-      debugger;
+  
       if (r.status == 'ok') {
         if (r.articles.length == 0) {
           event.target.disabled = true;

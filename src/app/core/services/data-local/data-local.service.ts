@@ -37,14 +37,22 @@ export class DataLocalService {
     return  await this.storage.get('favoritos');
   }
 
+  async getItem(item: string) {
+    return  await this.storage.get(item);
+  }
+
   async removeNew(item: Articles) {
-    debugger;
+
     this.news = this.news.filter(n => n.title != item.title);
     await this.storage.set('favoritos', this.news);
   }
 
-  create() {
-    this.storage.create();
+  async create() {
+    return await this.storage.create();
+  }
+
+  async addItem(key: string, value:any){
+    await this.storage.set(key, value);
   }
 
   async clear() {

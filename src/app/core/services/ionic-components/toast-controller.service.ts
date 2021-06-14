@@ -41,7 +41,7 @@ export class ToastControllerService {
       message: message,
       translucent: true,
       duration: 5000,
-      position: 'bottom',
+      position: 'top',
       color: 'danger',
     });
     
