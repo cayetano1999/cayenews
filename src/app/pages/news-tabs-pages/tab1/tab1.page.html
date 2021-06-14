@@ -12,7 +12,7 @@
 
   </app-errors>
 
-  <app-news-card *ngIf="!generalError" [news]="news"></app-news-card>
+  <app-news-card [favorites]="false"  *ngIf="!generalError" [news]="news"></app-news-card>
 
   <ion-infinite-scroll
     threshold="100px"

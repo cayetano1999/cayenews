@@ -2,7 +2,7 @@
   <ion-row>
     <ion-col size="12">
       <ion-searchbar
-        placeholder="Buscar Noticias"
+        placeholder="Search"
         inputmode="text"
         type="text"
         (ionChange)="onSearchChange($event)"
@@ -10,7 +10,6 @@
       ></ion-searchbar>
     </ion-col>
   </ion-row>
-
   <ion-row *ngIf="news?.length > 0">
     <ion-col
       *ngFor="let item of news | filterPipe: filter:'title'; let i = index"
@@ -23,7 +22,7 @@
       <ion-card >
         <ion-card-header>
           <ion-card-subtitle>
-            <ion-badge color="dark" mode="ios">
+            <ion-badge [color]="favorites ? 'warning' : 'dark'" mode="ios">
               <span color="primary">{{ i + 1 }}</span> -
               {{ item?.source?.name }} -
               {{ item?.publishedAt | date }}</ion-badge
@@ -38,8 +37,10 @@
           <div class="row">
             <div style="text-align: center !important" class="mt-3">
               <ion-buttons slot="icon-only">
-                <ion-button (click)="onClick()">
-                  <ion-icon name="star-outline"></ion-icon>
+                <ion-button (click)="addToFavorite(item)">
+                  <ion-icon *ngIf="!favorites" name="star-outline"></ion-icon>
+                  <ion-icon *ngIf="favorites" color="warning" name="star"></ion-icon>
+
                 </ion-button>
 
                 <ion-button (click)="shared(item)">
@@ -48,6 +49,10 @@
 
                 <ion-button (click)="redirectToNew(item)">
                   <ion-icon name="eye-outline"></ion-icon>
+                </ion-button>
+
+                <ion-button *ngIf="favorites" (click)="removeFavorite(item)">
+                  <ion-icon color="danger" name="trash-outline"></ion-icon>
                 </ion-button>
               </ion-buttons>
             </div>

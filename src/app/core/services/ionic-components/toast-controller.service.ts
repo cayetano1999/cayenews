@@ -47,4 +47,17 @@ export class ToastControllerService {
     
     toast.present();
   }
+
+  async showToastWarning(message: string){
+    const toast = await this.toastController.create({
+      animated: true,
+      message: message,
+      translucent: true,
+      duration: 5000,
+      position: 'bottom',
+      color: 'warning',
+    });
+    
+    toast.present();
+  }
 }
