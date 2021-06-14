@@ -20,7 +20,7 @@
       size-md="2"
       size-sm="12"
     >
-      <ion-card (click)="redirectToNew(item)">
+      <ion-card >
         <ion-card-header>
           <ion-card-subtitle>
             <ion-badge color="dark" mode="ios">
@@ -42,7 +42,7 @@
                   <ion-icon name="star-outline"></ion-icon>
                 </ion-button>
 
-                <ion-button (click)="onClick()">
+                <ion-button (click)="shared(item)">
                   <ion-icon name="share-social-outline"></ion-icon>
                 </ion-button>
 

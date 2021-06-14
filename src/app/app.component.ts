@@ -18,7 +18,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.stb.show();
+      // this.stb.show();
       this.stb.styleLightContent();
       this.splashScreen.hide();
     });

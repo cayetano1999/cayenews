@@ -20,7 +20,7 @@ export class Tab1Page implements OnInit {
   }
   news: Articles[];
   ngOnInit(): void {
-    // this.getAllNews();
+    this.getAllNews();
   }
 
   getAllNews(ev?) {
