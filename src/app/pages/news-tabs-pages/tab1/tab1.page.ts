@@ -3,6 +3,7 @@ import { NewsResponse } from 'src/app/core/interfaces/news-response';
 import { NewsApiService } from '../../../core/services/news-api/news-api.service';
 import { Articles } from '../../../core/interfaces/news-response';
 import { ToastController } from '@ionic/angular';
+import { ToastControllerService } from 'src/app/core/services/ionic-components/toast-controller.service';
 
 @Component({
   selector: 'app-tab1',
@@ -12,8 +13,9 @@ import { ToastController } from '@ionic/angular';
 export class Tab1Page implements OnInit {
   filter: string = '';
   page: number = 1;
+  generalError: boolean = false;
 
-  constructor(private newsApiService: NewsApiService, private toastController: ToastController) {
+  constructor(private newsApiService: NewsApiService, private toastService: ToastControllerService) {
 
   }
   news: Articles[];
@@ -23,11 +25,18 @@ export class Tab1Page implements OnInit {
 
   getAllNews(ev?) {
     this.newsApiService.getByCountry('us', 1).subscribe(response => {
+      ev?.target?.complete();
       if (response.status == 'ok') {
         this.news = response.articles;
         console.log(this.news);
-        ev?.target?.complete();
+        this.generalError = false;
       }
+
+    }, (error) => {
+      console.log(error);
+      this.generalError = true;
+      this.toastService.showToastError(`Ha ocurrido un error: ${error?.message}`);
+
     });
   }
 
@@ -35,7 +44,7 @@ export class Tab1Page implements OnInit {
     this.getAllNews(ev);
   }
 
-  refreshAllNews(){
+  refreshAllNews() {
 
   }
 
@@ -46,25 +55,28 @@ export class Tab1Page implements OnInit {
 
   getAllToScroll(event) {
     this.page++;
-      this.newsApiService.getByCountry('us', this.page).subscribe(r => {
-        debugger;
+    this.newsApiService.getByCountry('us', this.page).subscribe(r => {
+      debugger;
+      if (r.status == 'ok') {
         if (r.articles.length == 0) {
           event.target.disabled = true;
-          this.presentToast('All news has been displayed')
+          this.toastService.showToast('All news has been displayed');
         }
         else {
           this.news.push(...r.articles);
           event.target.complete();
         }
-      });
+        this.generalError = false;
+
+      }
+
+    }, (error) => {
+      this.toastService.showToastError('Ha ocurrido un error');
+      this.generalError = true;
+      event.target.disabled = true;
+
+    });
   }
 
-  async presentToast(message: string) {
-    const toast = await this.toastController.create({
-      message: message,
-      duration: 2000
-    });
-    toast.present();
-  }
 
 }

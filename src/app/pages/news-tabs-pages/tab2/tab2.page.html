@@ -5,7 +5,17 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
   
-  <app-news-card [news]="news"></app-news-card>
+
+
+  <app-errors 
+   message="La consulta no fue exitosa a causa de un error externo, intente en varios minutos." 
+   title="Ha ocurrido un error inesperado"
+  *ngIf="generalError">
+
+  </app-errors>
+
+  <app-news-card *ngIf="!generalError" [news]="news"></app-news-card>
+
 
   <ion-infinite-scroll
     threshold="100px"

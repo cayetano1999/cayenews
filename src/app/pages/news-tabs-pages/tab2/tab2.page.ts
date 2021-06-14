@@ -3,6 +3,7 @@ import { IonSegment, ToastController } from '@ionic/angular';
 import { Articles } from 'src/app/core/interfaces/news-response';
 import { Segment } from 'src/app/core/interfaces/segment';
 import { NewsApiService } from '../../../core/services/news-api/news-api.service';
+import { ToastControllerService } from '../../../core/services/ionic-components/toast-controller.service';
 
 @Component({
   selector: 'app-tab2',
@@ -11,78 +12,85 @@ import { NewsApiService } from '../../../core/services/news-api/news-api.service
 })
 export class Tab2Page implements OnInit {
   page: number = 1;
-  
-  constructor(private newsApiService: NewsApiService, private toastController: ToastController) {
-    
+
+  constructor(private newsApiService: NewsApiService, private toastControllerService: ToastControllerService) {
+
   }
-  
-  
+
+
   filter: string = '';
   defaultSegment: string = 'business';
   segments: Array<Segment> = [
     {
-      display:'Empresas',
-      name:'business',
+      display: 'Empresas',
+      name: 'business',
       icon: 'business-outline'
     },
     {
-      display:'Entretenimiento',
-      name:'entertainment',
+      display: 'Entretenimiento',
+      name: 'entertainment',
       icon: 'tv-outline'
     },
     {
-      display:'General',
-      name:'general',
-      icon:'apps-outline'
+      display: 'General',
+      name: 'general',
+      icon: 'apps-outline'
     },
     {
-      display:'Salud',
-      name:'health',
-      icon:'medkit'
+      display: 'Salud',
+      name: 'health',
+      icon: 'medkit'
     },
     {
-      display:'Ciencias',
-      name:'science',
-      icon:'color-wand-outline'
+      display: 'Ciencias',
+      name: 'science',
+      icon: 'color-wand-outline'
     },
     {
-      display:'Deportes',
-      name:'sports',
+      display: 'Deportes',
+      name: 'sports',
       icon: 'baseball-outline'
     },
     {
-      display:'Tecnologia',
-      name:'technology',
-      icon:'laptop-outline'
+      display: 'Tecnologia',
+      name: 'technology',
+      icon: 'laptop-outline'
     }
   ];
   news: Array<Articles>;
+  generalError: boolean = false;
 
   ngOnInit(): void {
     this.getByCountryAndCategory(this.defaultSegment)
   }
 
-  segmentChanged(event){
+  segmentChanged(event) {
 
   }
 
-  doRefresh(event){
+  doRefresh(event) {
     this.getByCountryAndCategory(event);
   }
 
-  getByCountryAndCategory(ev?){
-    this.newsApiService.getByCountryAndCategory('us', this.defaultSegment, 1).subscribe(response=> {
+  getByCountryAndCategory(ev?) {
+    this.newsApiService.getByCountryAndCategory('us', this.defaultSegment, 1).subscribe(response => {
+      ev?.target?.complete();
       this.news = response.articles;
       ev?.target?.complete();
+      this.generalError = false;
+    }, (error) => {
+      ev?.target?.complete();
+      this.toastControllerService.showToastError('Ha ocurrido un error');
+      this.generalError = true;
     })
   }
 
-  onSearchChange(event){
+  onSearchChange(event) {
     this.filter = event.detail.value;
 
   }
 
-  getSegment(item: Segment){
+  getSegment(item: Segment) {
     console.log(item);
     this.defaultSegment = item.name;
     this.getByCountryAndCategory();
@@ -90,25 +98,21 @@ export class Tab2Page implements OnInit {
 
   getAllToScroll(event) {
     this.page++;
-      this.newsApiService.getByCountryAndCategory('us',  this.defaultSegment, this.page).subscribe(r => {
-        debugger;
-        if (r.articles.length == 0) {
-          event.target.disabled = true;
-          this.presentToast('All news has been displayed')
-        }
-        else {
-          this.news.push(...r.articles);
-          event.target.complete();
-        }
-      });
+    this.newsApiService.getByCountryAndCategory('us', this.defaultSegment, this.page).subscribe(r => {
+      this.generalError = false;
+      if (r.articles.length == 0) {
+        event.target.disabled = true;
+        this.toastControllerService.showToastSuccess('All news has been displayed')
+      }
+      else {
+        this.news.push(...r.articles);
+        event.target.complete();
+      }
+    }, (error) => {
+      this.toastControllerService.showToastError('Ha ocurrido un error');
+      this.generalError = true;
+    });
   }
 
-  async presentToast(message: string) {
-    const toast = await this.toastController.create({
-      message: message,
-      duration: 2000
-    });
-    toast.present();
-  }
 
 }
