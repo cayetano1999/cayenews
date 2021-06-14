@@ -20,7 +20,7 @@ export class Tab1Page implements OnInit {
   }
   news: Articles[];
   ngOnInit(): void {
-    this.getAllNews();
+    // this.getAllNews();
   }
 
   getAllNews(ev?) {
@@ -60,7 +60,7 @@ export class Tab1Page implements OnInit {
       if (r.status == 'ok') {
         if (r.articles.length == 0) {
           event.target.disabled = true;
-          this.toastService.showToast('All news has been displayed');
+          this.toastService.showToastSuccess('All news has been displayed');
         }
         else {
           this.news.push(...r.articles);

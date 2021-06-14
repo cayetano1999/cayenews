@@ -15,7 +15,7 @@ export class ToastControllerService {
       animated: true,
       message: message,
       translucent: true,
-      duration: 2000,
+      duration: 4000,
       position: 'middle'
     });
 
@@ -27,7 +27,7 @@ export class ToastControllerService {
       animated: true,
       message: message,
       translucent: true,
-      duration: 2000,
+      duration: 4000,
       position: 'bottom',
       color: 'success',
     });

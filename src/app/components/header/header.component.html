@@ -4,49 +4,23 @@
   color="primary"
   translucent="true"
 >
-  <div
-    class="bg-danger"
-    style="
-      background-color: black !important;
-      opacity: 0.9;
-      position: relative;
-    "
-  >
-    <ion-toolbar color="dark" class="ion-no-border">
-      <ion-buttons slot="start">
-        <ion-back-button
-          *ngIf="showBackButton"
-          color="primary"
-          defaultHref="/"
-        ></ion-back-button>
-        <ion-back-button
-          *ngIf="!showBackButton"
-          color="dark"
-          defaultHref="/"
-        ></ion-back-button>
-      </ion-buttons>
-    </ion-toolbar>
-    <div class="bg-dark py-3" style="margin-top: -10px !important">
-      <!-- <div class="float-left">
-      <ion-button slot="end" (click)="onClick()">
-        <ion-icon slot="icon-only" color="dark" name="cog-outline"></ion-icon>
-      </ion-button>
-    </div> -->
-
-      <!-- <ion-back-button *ngIf="showBackButton" color="primary" defaultHref="/"></ion-back-button> -->
-      <!-- <ion-back-button *ngIf="!showBackButton" color="dark" defaultHref="/"></ion-back-button> -->
-
-      <ion-title>
-        <h3 class="ion-text-sm-left text-center text-white">
-          <strong>{{ title }}</strong>
-        </h3>
-      </ion-title>
-    </div>
-  </div>
-
-
-
-
+  <ion-toolbar color="dark" class="ion-no-border">
+    <ion-buttons slot="start">
+      <ion-back-button
+        *ngIf="showBackButton"
+        color="primary"
+        defaultHref="/"
+      ></ion-back-button>
+      <ion-back-button
+        *ngIf="!showBackButton"
+        color="dark"
+        defaultHref="/"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      {{ title }}
+    </ion-title>
+  </ion-toolbar>
 
   <ion-segment
     *ngIf="showSegment"

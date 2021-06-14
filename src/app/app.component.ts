@@ -1,4 +1,10 @@
 import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+// import { StatusBar } from '@ionic-native/status-bar/index';
+
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +12,15 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private platform: Platform, private splashScreen: SplashScreen, private stb: StatusBar ) {
+    this.initializeApp();
+  }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+      this.stb.show();
+      this.stb.styleLightContent();
+      this.splashScreen.hide();
+    });
+  }
 }
