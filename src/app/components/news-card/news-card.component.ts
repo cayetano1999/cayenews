@@ -53,8 +53,10 @@ export class NewsCardComponent implements OnInit {
 
   async addToFavorite(item: Articles) {
     debugger;
-    await this.dataLocalService.saveNews(item);
-    this.favoritesNews = await this.dataLocalService.getNews();
+    if (!this.favorites) {
+      await this.dataLocalService.saveNews(item);
+      this.favoritesNews = await this.dataLocalService.getNews();
+    }
   }
 
   removeFavorite(item: Articles) {
@@ -100,11 +102,11 @@ export class NewsCardComponent implements OnInit {
     console.log('onDidDismiss resolved with role', role);
   }
 
-  async clearFavorites(){
+  async clearFavorites() {
     await this.dataLocalService.clear();
     this.news = [];
     this.toastService.showToastSuccess('Done!!');
-    this.clearFavoritesEvent.emit({deleted: true});
+    this.clearFavoritesEvent.emit({ deleted: true });
   }
 
 }

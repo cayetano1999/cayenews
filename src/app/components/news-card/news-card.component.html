@@ -1,6 +1,6 @@
 <ion-grid fixed>
   
-  <ion-toolbar>
+  <ion-toolbar *ngIf="favorites && news?.length > 0">
     <ion-buttons slot="end">
       <ion-button (click)="showOptions()">
         <ion-icon name="ellipsis-vertical-outline"></ion-icon>

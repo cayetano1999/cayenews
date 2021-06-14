@@ -19,17 +19,22 @@ export class Tab3Page implements OnInit {
   }
 
   async getFavoritos() {
-    this.news  = await this.dataLocalService.getNews();
-    if(!this.news){
-      this.news = [];
-    }
+    this.news = await this.dataLocalService.getNews();
+    this.verifyNews();
   }
 
   doRefresh(ev) {
     this.dataLocalService.getNews().then(r => {
       this.news = r;
+      this.verifyNews();
       ev?.target?.complete();
     })
+  }
+
+  verifyNews() {
+    if (!this.news) {
+      this.news = [];
+    }
   }
 
   deleteNews(item: Articles) {
@@ -46,9 +51,9 @@ export class Tab3Page implements OnInit {
     }, '¿Are you sure?', 'This item will be deleted', 'Yes, I am sure');
   }
 
-  async clearFavorites(event){
+  async clearFavorites(event) {
     console.log('Se limpió la db');
-     await this.getFavoritos(); 
+    await this.getFavoritos();
   }
 
 
