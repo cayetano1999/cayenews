@@ -1,10 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { Segment } from 'src/app/core/interfaces/segment';
 import { Articles } from '../../core/interfaces/news-response';
 import { ToastControllerService } from 'src/app/core/services/ionic-components/toast-controller.service';
-import {Storage} from '@ionic/storage'
+import { Storage } from '@ionic/storage'
 import { DataLocalService } from 'src/app/core/services/data-local/data-local.service';
 import { AlertControllerService } from 'src/app/core/services/ionic-components/alert-controller.service';
 
@@ -16,26 +16,31 @@ import { AlertControllerService } from 'src/app/core/services/ionic-components/a
 export class NewsCardComponent implements OnInit {
   @Input() news: Articles[];
   @Input() index: number;
+  @Output() newsToDelete = new EventEmitter();
   filter: string = '';
   new: Articles
+  favoritesNews: Articles[];
   @Input() favorites: boolean = true;
- 
+
   constructor(private iab: InAppBrowser, private socialShared: SocialSharing, private toastService: ToastControllerService, private dataLocalService: DataLocalService, private alertService: AlertControllerService) { }
 
-  ngOnInit() { 
+  async ngOnInit() {
     this.dataLocalService.create();
+    await this.dataLocalService.getNews().then(r => {
+      this.favoritesNews = r;
+    })
   }
 
-  onSearchChange(event){
+  onSearchChange(event) {
     this.filter = event.detail.value;
 
   }
 
-  redirectToNew(item: Articles){
+  redirectToNew(item: Articles) {
     this.iab.create(item.url, '_system');
   }
 
-  shared(item: Articles){
+  shared(item: Articles) {
     this.socialShared.share(item.title, item.source.name, '', item.url).then(() => {
       this.toastService.showToastSuccess('News has been shared successfully');
     }).catch(() => {
@@ -43,13 +48,25 @@ export class NewsCardComponent implements OnInit {
     });
   }
 
-  addToFavorite(item: Articles){
+  addToFavorite(item: Articles) {
     this.dataLocalService.saveNews(item);
   }
 
-  removeFavorite(item: Articles){
-    this.alertService.confirmation((r)=> {
-      this.dataLocalService.removeNew(item);
-    },'¿Are you sure?', 'This item will be deleted', 'Yes, I am sure');
+  removeFavorite(item: Articles) {
+    this.newsToDelete.emit(item);
+
+  }
+
+  isFavorite(item: Articles) {
+    debugger;
+    let value = false
+    if(this.favoritesNews){
+      let exist = this.favoritesNews.filter(e=> e.title == item.title).length > 0;
+      if(exist){
+        value = true;
+      }
+      
+    }
+    return value;
   }
 }

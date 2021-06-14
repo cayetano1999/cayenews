@@ -9,7 +9,7 @@ import { ToastControllerService } from '../ionic-components/toast-controller.ser
   providedIn: 'root'
 })
 export class DataLocalService {
- 
+
 
   news: Articles[] = [];
   constructor(private storage: Storage, private toast: ToastControllerService) {
@@ -20,11 +20,19 @@ export class DataLocalService {
     const exist = this.news.filter(n => n == article).length > 0;
     if (!exist) {
       this.news.unshift(article);
-      this.storage.set('favoritos', this.news);
+      this.storage.set('favoritos', this.news).then(r=> {
+        this.toast.showToastSuccess('this news has been added to favorites');
+      });
     }
-    else{
+    else {
       this.toast.showToastWarning('this news already exist in your favorites');
     }
+  }
+
+  restartNews(articles: Articles[]) {
+    this.storage.set('favoritos', []).then(r=> {
+      this.storage.set('favoritos', articles);
+    })
   }
 
   getNews() {
