@@ -15,8 +15,8 @@ export class NewsApiService {
   routes = {
     country: '?country=',
     apiKey: '&apiKey=',
-    getNewsByCountry: (country: string, page: number) => `${this.apiUrl}?country=${country}&apiKey=${this.apiKey}&page=${page}`,
-    getNewsByCountryAndCategory: (country: string, category:string, page: number) => `${this.apiUrl}?country=${country}&category=${category}&apiKey=${this.apiKey}&page=${page}`,
+    getNewsByCountry: (file: string) => `assets/data/${file}`,
+    getNewsByCountryAndCategory: (file: string) => `assets/data/${file}.json`,
 
 
   }
@@ -26,12 +26,12 @@ export class NewsApiService {
 
   }
 
-  getByCountry(country: string, page: number): Observable<NewsResponse> {
-    return this.httpClient.get<NewsResponse>(this.routes.getNewsByCountry(country, page));
+  getByCountry(file: string): Observable<NewsResponse> {
+    return this.httpClient.get<NewsResponse>(this.routes.getNewsByCountry(file));
   }
 
-  getByCountryAndCategory(country: string, category: string, page: number): Observable<NewsResponse> {
-    return this.httpClient.get<NewsResponse>(this.routes.getNewsByCountryAndCategory(country, category,page));
+  getByCountryAndCategory(file: string): Observable<NewsResponse> {
+    return this.httpClient.get<NewsResponse>(this.routes.getNewsByCountryAndCategory(file));
   }
 
 }

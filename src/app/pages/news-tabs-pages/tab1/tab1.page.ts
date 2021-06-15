@@ -24,7 +24,7 @@ export class Tab1Page implements OnInit {
   }
 
   getAllNews(ev?) {
-    this.newsApiService.getByCountry('us', 1).subscribe(response => {
+    this.newsApiService.getByCountry('news-for-you.json').subscribe(response => {
       ev?.target?.complete();
       if (response.status == 'ok') {
         this.news = response.articles;
@@ -55,7 +55,7 @@ export class Tab1Page implements OnInit {
 
   getAllToScroll(event) {
     this.page++;
-    this.newsApiService.getByCountry('us', this.page).subscribe(r => {
+    this.newsApiService.getByCountry('news-for-you.json').subscribe(r => {
   
       if (r.status == 'ok') {
         if (r.articles.length == 0) {

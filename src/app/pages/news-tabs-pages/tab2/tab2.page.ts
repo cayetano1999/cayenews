@@ -73,7 +73,7 @@ export class Tab2Page implements OnInit {
   }
 
   getByCountryAndCategory(ev?) {
-    this.newsApiService.getByCountryAndCategory('us', this.defaultSegment, 1).subscribe(response => {
+    this.newsApiService.getByCountryAndCategory(this.defaultSegment).subscribe(response => {
       ev?.target?.complete();
       this.news = response.articles;
       ev?.target?.complete();
@@ -98,7 +98,7 @@ export class Tab2Page implements OnInit {
 
   getAllToScroll(event) {
     this.page++;
-    this.newsApiService.getByCountryAndCategory('us', this.defaultSegment, this.page).subscribe(r => {
+    this.newsApiService.getByCountryAndCategory(this.defaultSegment).subscribe(r => {
       this.generalError = false;
       if (r.articles.length == 0) {
         event.target.disabled = true;
