@@ -1,0 +1,227 @@
+{
+    "status": "ok",
+    "totalResults": 37,
+    "articles": [
+        {
+            "source": {
+                "id": null,
+                "name": "Live Science"
+            },
+            "author": "Harry Baker",
+            "title": "Scientists unravel mystery of echidnas' bizarre 4-headed penis - Livescience.com",
+            "description": "It is one of nature's weirdest wangs.",
+            "url": "https://www.livescience.com/mystery-of-4-headed-echidna-penis-solved.html",
+            "urlToImage": "https://cdn.mos.cms.futurecdn.net/vrHMKbxJLHRH4HSeF5Vk7V-1200-80.jpg",
+            "publishedAt": "2021-06-14T11:41:49Z",
+            "content": "Scientists in Australia have uncovered the mystery behind the bizarre four-headed echidna\r\n penis by creating an advanced 3D model of the peculiar organ.\r\nThere are four species of echidnas that, alo… [+4946 chars]"
+        },
+        {
+            "source": {
+                "id": "wired",
+                "name": "Wired"
+            },
+            "author": "Matt Simon",
+            "title": "How Do You Make a Robot Walk on Mars? It's a Steep Challenge - WIRED",
+            "description": "Meet SpaceBok, a little, four-legged machine that’s taking the first steps toward walking on the Red Planet’s brutal terrain.",
+            "url": "https://www.wired.com/story/how-do-you-make-a-robot-walk-on-mars-its-a-steep-challenge/",
+            "urlToImage": "https://media.wired.com/photos/60c388bb905028c723cfd258/191:100/w_1280,c_limit/Science-Mars-Spacebok-Robot_DSC3504.jpg",
+            "publishedAt": "2021-06-14T11:00:00Z",
+            "content": "From the Sojourner rover, which landed on Mars in 1997, to Perseverance, which touched down in February, the robots of the Red Planet share a defining feature: wheels. Rolling is far more stable and … [+3184 chars]"
+        },
+        {
+            "source": {
+                "id": "independent",
+                "name": "Independent"
+            },
+            "author": "Adam Smith",
+            "title": "Scientists discover Earth’s core is growing ‘lopsided’ - and solve a 30 year-old mystery - The Independent",
+            "description": "The Earth’s core is growing faster under Indonesia than at its opposite side, under Brazil",
+            "url": "https://www.independent.co.uk/space/scientists-earth-core-lopsided-mystery-b1865314.html",
+            "urlToImage": "https://static.independent.co.uk/2021/06/14/09/iStock-962321406.jpeg?width=1200&auto=webp&quality=75",
+            "publishedAt": "2021-06-14T10:45:11Z",
+            "content": "The Earths core is growing lopsided, scientists have discovered, but it is unclear why.\r\nThe solid-iron core in the middle of the planet has been growing faster under Indonesias Banda Sea, seismologi… [+3377 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Nature.com"
+            },
+            "author": null,
+            "title": "Katherine Johnson's memoir charts her bold trajectory to NASA and beyond - Nature.com",
+            "description": "Mathematician overcame the gravitational pulls of gender and racial discrimination to play a key part in the space race.",
+            "url": "https://www.nature.com/articles/d41586-021-01585-9",
+            "urlToImage": "https://media.nature.com/lw1024/magazine-assets/d41586-021-01585-9/d41586-021-01585-9_19224792.jpg",
+            "publishedAt": "2021-06-14T10:02:33Z",
+            "content": "Katherine Johnson performing calculations for space missions at NASA in 1966.Credit: NASA\r\nMy Remarkable Journey: A MemoirKatherine Johnson, Joylette Hylick &amp; Katherine Moore, with Lisa Frazier P… [+6050 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Firstpost"
+            },
+            "author": null,
+            "title": "Satellite images reveal ice shelf protecting Antarctic glacier is on the verge of collapse - Firstpost",
+            "description": "The floating ice shelf acts like a cork in a bottle for the fast-melting glacier and prevents its much larger ice mass from flowing into the ocean.",
+            "url": "https://www.firstpost.com/tech/science/satellite-images-reveal-ice-shelf-protecting-antarctic-glacier-is-on-the-verge-of-collapse-9715271.html",
+            "urlToImage": "https://images.firstpost.com/wp-content/uploads/2021/06/15093659827_7a14286249_k-1.jpg",
+            "publishedAt": "2021-06-14T08:52:25Z",
+            "content": "The Associated PressJun 14, 2021 14:22:25 IST\r\nA critical Antarctic glacier is looking more vulnerable as satellite images show the ice shelf that blocks it from collapsing into the sea is breaking u… [+2799 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "SciTechDaily"
+            },
+            "author": null,
+            "title": "Hubble Spots a Galactic Powerhouse - SciTechDaily",
+            "description": "This image shows the spiral galaxy NGC 3254, observed using Hubble's Wide Field Camera 3 (WFC3). WFC3 has the capacity to observe ultraviolet, visible, and near-infrared light, and this image is a composite of observations taken in the visible and infrared. I…",
+            "url": "https://scitechdaily.com/hubble-spots-a-galactic-powerhouse/",
+            "urlToImage": "https://scitechdaily.com/images/Galaxy-NGC-3254.jpg",
+            "publishedAt": "2021-06-14T04:04:55Z",
+            "content": "Hubble Space Telescope image of spiral galaxy NGC 3254. Credit: ESA/Hubble &amp; NASA, A. Riess et al.\r\nThis image shows the spiral galaxy NGC 3254, observed using Hubble’s Wide Field Camera 3 (WFC3)… [+1110 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "ScienceAlert"
+            },
+            "author": "David Nield",
+            "title": "Scientists Track The Secret Sounds of Rocket Launches That Human Can't Hear - ScienceAlert",
+            "description": "Rocket launches are noisy affairs, for sure, but the sounds they produce aren't all audible to the human ear. As rockets leave Earth they generate infrasound, low-frequency sound waves that need special instruments to detect.",
+            "url": "https://www.sciencealert.com/scientists-have-tracked-the-infrasound-rumbles-of-rocket-launches-that-human-ears-can-t-hear",
+            "urlToImage": "https://www.sciencealert.com/images/2021-06/processed/rocket-launch_1024.jpg",
+            "publishedAt": "2021-06-13T21:02:21Z",
+            "content": "Rocket launches are noisy affairs, for sure, but the sounds they produce aren't all audible to the human ear. As rockets leave Earth they generate infrasound, low-frequency sound waves that need spec… [+2526 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Salon"
+            },
+            "author": "Luke Shors, Amit Chandra",
+            "title": "As science advances, does Ockham's Razor still apply? - Salon",
+            "description": "The notion that the simpler explanation is usually right has been useful for centuries. New science may change that",
+            "url": "https://www.salon.com/2021/06/13/as-science-advances-does-ockhams-razor-still-apply/",
+            "urlToImage": "https://mediaproxy.salon.com/width/1200/https://media.salon.com/2021/06/science-straight-razor-occams-razor-concept-0610211.jpg",
+            "publishedAt": "2021-06-13T18:00:00Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Republic World"
+            },
+            "author": "Arisha Dutta",
+            "title": "Astronaut aboard ISS shares collage of Suez Canal made up of 100 images combined together - Republic World",
+            "description": "Astronaut Thomas Pesquet shared a collage image of 100 pictures of the Suez Cana, social media flooded with appreciation.",
+            "url": "https://www.republicworld.com/entertainment-news/whats-viral/astronaut-aboard-iss-shares-collage-of-suez-canal-combining-100-images-together.html",
+            "urlToImage": "https://img.republicworld.com/republic-prod/stories/promolarge/xhdpi/ey6uoe7ykarxyx7x_1623603791.jpeg",
+            "publishedAt": "2021-06-13T17:31:00Z",
+            "content": "The beauty of human-made excellence, Suez Canal is known to the human civilization, but Astronaut Thomas Pesquet took the internet by storm with his magnificent clicks. Thomas Pesquet is presently on… [+1803 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "BBC News"
+            },
+            "author": "https://www.facebook.com/bbcnews",
+            "title": "Nasa's giant SLS rocket: a guide - BBC News",
+            "description": "Nasa's huge next-generation rocket is undergoing tests ahead of its maiden flight in 2021.",
+            "url": "https://www.bbc.com/news/science-environment-54156798",
+            "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/0241/production/_114377500_sls-70mt-dac3org-launch-cam-top_view-uhr2_adj_tw.jpg",
+            "publishedAt": "2021-06-13T14:12:24Z",
+            "content": "By Paul RinconScience editor, BBC News website\r\nNasa has been developing a huge rocket called the Space Launch System (SLS) to launch astronauts to the Moon - and eventually Mars. Set to make its deb… [+6964 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "SciTechDaily"
+            },
+            "author": null,
+            "title": "Out of This World Discovery by Citizen Scientists: Two Gaseous Planets Around a Bright Sun-Like Star - SciTechDaily",
+            "description": "At night, seven-year-old Miguel likes talking to his father Cesar Rubio about planets and stars. “I try to nurture that,” says Rubio, a machinist in Pomona, California, who makes parts for mining and power generation equipment. Now, the boy can claim his fath…",
+            "url": "https://scitechdaily.com/out-of-this-world-discovery-by-citizen-scientists-two-gaseous-planets-around-a-bright-sun-like-star/",
+            "urlToImage": "https://scitechdaily.com/images/Two-Gaseous-Planets-Orbit-the-Bright-Star-HD-152843-scaled.jpg",
+            "publishedAt": "2021-06-13T13:41:40Z",
+            "content": "In this artists rendering, two gaseous planets orbit the bright star HD 152843. These planets were discovered through the citizen science project Planet Hunters TESS, in collaboration with profession… [+8735 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Live Science"
+            },
+            "author": "Ben Turner",
+            "title": "100,000 star nurseries mapped in first-of-its-kind survey - Livescience.com",
+            "description": "The researchers say that they want to use the survey to better understand our own place in the universe.",
+            "url": "https://www.livescience.com/star-nurseries-mapped.html",
+            "urlToImage": "https://cdn.mos.cms.futurecdn.net/m8q9MJWrsaqnw6YXL5Dxa5-1200-80.jpg",
+            "publishedAt": "2021-06-13T13:31:29Z",
+            "content": "Stellar nurseries, the cauldrons of gas and dust where stars are forged, are far more diverse than astronomers first thought, according to a new, first-of-its kind survey.\r\nAstronomers at the Physics… [+4148 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "SciTechDaily"
+            },
+            "author": null,
+            "title": "Portal to the Dark Side: Sterile Neutrinos an Intriguing Possibility in the Quest for Understanding Dark Matter - SciTechDaily",
+            "description": "“Sterile neutrinos” are theoretically predicted new particles that offer an intriguing possibility in the quest for understanding the dark matter in our universe. Unlike the known “active” neutrinos in the Standard Model (SM) of particle physics, these steril…",
+            "url": "https://scitechdaily.com/portal-to-the-dark-side-sterile-neutrinos-an-intriguing-possibility-in-the-quest-for-understanding-dark-matter/",
+            "urlToImage": "https://scitechdaily.com/images/Dark-Matter-Particle-Physics-Concept.gif",
+            "publishedAt": "2021-06-13T12:21:24Z",
+            "content": "Sterile neutrinos are theoretically predicted new particles that offer an intriguing possibility in the quest for understanding the dark matter in our universe.\r\nUnlike the known active neutrinos in … [+3684 chars]"
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Gregory McNamee, CNN",
+            "title": "Think science and religion don't mix? Don't tell that to Mars rover scientist Rev. Pamela Conrad - CNN",
+            "description": "Rev. Pamela Conrad has a day job as an Episcopalian priest, leading a congregation in Maryland. At odd hours of the day and night, Conrad works as a Mars Perseverance rover scientist.",
+            "url": "https://www.cnn.com/2021/06/13/world/mars-rover-scientist-pamela-conrad-episcopal-priest-scn/index.html",
+            "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/210610175559-01-pamela-gales-conrad-nasa-restricted-super-tease.jpg",
+            "publishedAt": "2021-06-13T11:32:00Z",
+            "content": "(CNN)When Rev. Pamela Conrad looks into the heavens, she really looks into the heavens.\r\nBy night, and at odd moments during the day, Conrad moonlights as a research scientist at the Carnegie Institu… [+7513 chars]"
+        },
+        {
+            "source": {
+                "id": "axios",
+                "name": "Axios"
+            },
+            "author": "Andrew Freedman",
+            "title": "Study: Key Antarctic ice shelf is speeding up its collapse - Axios",
+            "description": "The glacier is already responsible for much of Antarctica's contribution to global sea level rise.",
+            "url": "https://www.axios.com/pine-island-glacier-ice-shelf-breakup-sea-level-fa1d02c3-e9cd-4796-8007-de3878338e17.html",
+            "urlToImage": "https://images.axios.com/XXQCNJnoboOurt02zB6VYCYuBk0=/0x0:1346x757/1366x768/2021/06/13/1623562272982.png",
+            "publishedAt": "2021-06-13T11:30:35Z",
+            "content": "The Pine Island Glacier on the West Antarctic Ice Sheet is responsible for more than a quarter of Antarctica's contribution to global sea level rise over the past decades. Now, a new study shows it i… [+3172 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Live Science"
+            },
+            "author": "Randyn Bartholomew",
+            "title": "Will humans ever learn to speak whale? - Livescience.com",
+            "description": "What do those clicking sounds mean?",
+            "url": "https://www.livescience.com/can-humans-understand-whales.html",
+            "urlToImage": "https://cdn.mos.cms.futurecdn.net/u89bbaea6GXx9uEAmfnrW8-1200-80.jpg",
+            "publishedAt": "2021-06-13T11:00:15Z",
+            "content": "Sperm whales are among the loudest living animals on the planet, producing creaking, knocking and staccato clicking sounds to communicate with other whales that are a few feet to even a few hundred m… [+5255 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "EarthSky"
+            },
+            "author": null,
+            "title": "All you need to know: June solstice 2021 | Astronomy Essentials - EarthSky",
+            "description": "Depending on time zone, the June solstice comes on June 20 or 21. Longest day for the Northern Hemisphere. Shortest day for the Southern Hemisphere.",
+            "url": "https://earthsky.org/astronomy-essentials/everything-you-need-to-know-june-solstice/",
+            "urlToImage": "https://earthsky.org/upl/2016/06/sunset-mar15-June7-Abhijit-Juvekar.jpg",
+            "publishedAt": "2021-06-01T19:24:29Z",
+            "content": "The sunset has been making its way north, as illustrated in this 2016 photo composite by Abhijit Juvekar.\r\nThe June solstice – your signal to celebrate summer in the Northern Hemisphere and winter in… [+6865 chars]"
+        }
+    ]
+}

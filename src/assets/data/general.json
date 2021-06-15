@@ -1,0 +1,266 @@
+{
+    "status": "ok",
+    "totalResults": 70,
+    "articles": [
+        {
+            "source": {
+                "id": null,
+                "name": "MarketWatch"
+            },
+            "author": "Associated Press",
+            "title": "Disney World and Disneyland won't require fully vaccinated visitors to wear masks anymore - MarketWatch",
+            "description": "Visitors will not be required to show proof of vaccination, and children 12 and under will still need to mask up",
+            "url": "https://www.marketwatch.com/story/disney-world-and-disneyland-wont-require-fully-vaccinated-visitors-to-wear-masks-anymore-01623698096",
+            "urlToImage": "https://images.mktw.net/im-259586/social",
+            "publishedAt": "2021-06-14T19:14:00Z",
+            "content": "ORLANDO, Fla. (AP) Walt Disney World in Florida is making it easier to see smiles again, but guests still cant hug the characters.Starting June 15, face masks will be optional for visitors to the the… [+1492 chars]"
+        },
+        {
+            "source": {
+                "id": "fox-news",
+                "name": "Fox News"
+            },
+            "author": "Jessica Napoli",
+            "title": "Bravo star Madison LeCroy debuts new boyfriend on Instagram after Alex Rodriguez drama - Fox News",
+            "description": "The \"Southern Charm\" star posted a series of photos of herself kissing her new man while on a boat in Lake Tahoe.",
+            "url": "https://www.foxnews.com/entertainment/madison-lecroy-boyfriend-drama-dating-alex-rodriguez",
+            "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2021/03/Madison-LeCroy.jpg",
+            "publishedAt": "2021-06-14T18:39:28Z",
+            "content": "Madison LeCroy made her relationship with her new boyfriend official on social media.\r\nThe \"Southern Charm\" star posted a series of photos of herself kissing her new man while on a boat in Lake Tahoe… [+2236 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "HuffPost"
+            },
+            "author": "Cole Delbyck",
+            "title": "Ewan McGregor's Daughter Clara Goes From Emergency Room To Red Carpet After Dog Bite - HuffPost",
+            "description": "Clara McGregor walked the red carpet for her new movie less than an hour after a dog bite sent her to the ER.",
+            "url": "https://www.huffpost.com/entry/ewan-mcgregors-daughter-clara-went-from-emergency-room-to-red-carpet-after-dog-bite_n_60c78c6ae4b02eb095663e6a",
+            "urlToImage": "https://img.huffingtonpost.com/asset/60c79385280000b9106f8f68.png?ops=1778_1000",
+            "publishedAt": "2021-06-14T18:38:00Z",
+            "content": "Whether rain, shine or canine attack, actor Clara McGregor was determined to make it to her movie premiere on time. \r\nThe 25-year-old daughter of Ewan McGregor suffered a dog bite on her face before … [+1984 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Vulture"
+            },
+            "author": "Zoe Haylock",
+            "title": "Spice Girls Are Dropping an Entire EP of ‘Wannabe’ - Vulture",
+            "description": "Celebrating 25 years of zigazig-ah.",
+            "url": "http://www.vulture.com/2021/06/spice-girls-wannabe-25-anniversary-ep.html",
+            "urlToImage": "https://pyxis.nymag.com/v1/imgs/de8/c35/478e4d99744f36f2b45c436f67a0bb7e55-spice-girls-97.1x.rsocial.w1200.jpg",
+            "publishedAt": "2021-06-14T18:23:35Z",
+            "content": "The hit single Wannabe by the Spice Girls is turning 25, but lets not think about what that means for your youth. In honor of the tracks 25th anniversary, the Spice Girls are releasing Wannabe 25, an… [+1164 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "HuffPost"
+            },
+            "author": "Curtis M. Wong",
+            "title": "'In The Heights' Director Has Disappointing Response To 'Whitewashing' Criticisms - HuffPost",
+            "description": "\"We're not going to get everything right in a movie,\" Jon M. Chu, who faced similar backlash for \"Crazy Rich Asians,\" told The Root.",
+            "url": "https://www.huffpost.com/entry/in-the-heights-colorism-accusations_n_60c7744ce4b0cacefae15af3",
+            "urlToImage": "https://img.huffingtonpost.com/asset/60c7799a410000781081242e.jpg?cache=czwrny4ft2&ops=1778_1000",
+            "publishedAt": "2021-06-14T18:21:00Z",
+            "content": "After a yearlong delay due to the pandemic, In the Heights opened in theaters last week to near-universal praise from critics, many of whom hailed it as a cinematic celebration of Latinx culture.\r\nTh… [+3315 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "Suzy Byrne",
+            "title": "Jessica Biel worries her sons will want to be musicians like dad Justin Timberlake: ‘The bar is high’ - Yahoo Entertainment",
+            "description": "\"My knee-jerk reaction is: Oh, god, no. Please no,\" Biel, 39, said on Monday's Armchair Expert podcast.",
+            "url": "https://www.yahoo.com/entertainment/jessica-biel-sons-musicians-like-dad-justin-timberlake-181530763.html",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/UnrBk4szPPExYmy4NWPF7A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTIwMDA7aD0xMzMz/https://s.yimg.com/os/creatr-images/2020-03/20163450-5d7e-11ea-b76b-478306637d72",
+            "publishedAt": "2021-06-14T18:15:30Z",
+            "content": "Jessica Biel and husband Justin Timberlake were showbiz kids, but that doesn't mean they're keen on their own sons Silas, 6, and 11-month-old Phineas following in their footsteps.\r\n\"My knee-jerk reac… [+5486 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Deadline"
+            },
+            "author": "Anthony D'Alessandro",
+            "title": "‘In The Heights’ Has Slow Start On HBO Max In Addition To Soft Box Office Opening, Samba TV Says - Deadline",
+            "description": "Third-party streaming viewership stat org Samba TV reports this morning that 693k U.S. households watched In the Heights on HBO Max in their live+3-day window. The news comes in the wake of the Warner Bros. feature musical losing the No. 1 spot at the weekend…",
+            "url": "https://deadline.com/2021/06/in-the-heights-hbo-max-viewership-box-office-opening-1234774865/",
+            "urlToImage": "https://deadline.com/wp-content/uploads/2021/06/in-the-heights-2.jpeg?w=1024",
+            "publishedAt": "2021-06-14T18:11:00Z",
+            "content": "Third-party streaming viewership stat org Samba TV reports this morning that 693k U.S. households watched In the Heightson HBO Max in their live+3-day window. The news comes in the wake of the Warner… [+3148 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "WCVB Boston"
+            },
+            "author": "Troy Frisby",
+            "title": "Laverne Cox: Actress and transgender icon - WCVB Boston",
+            "description": "Though she rose to fame on \"Orange Is the New Black,\" Laverne Cox's impact on transgender visibility in media goes well beyond her role as Sophia Burset.",
+            "url": "https://www.wcvb.com/article/laverne-cox-oitnb-actress-transgender-icon/36719122",
+            "urlToImage": "https://kubrick.htvapps.com/vidthumb/images/pride-laverne-cox-1623692292.jpg?crop=1xw:1xh;center,top&resize=1200:*",
+            "publishedAt": "2021-06-14T18:10:00Z",
+            "content": "Laverne Cox is an actress and a pioneering figure for transgender visibility.\r\nCox rose to fame with her Emmy-nominated role on \"Orange Is the New Black,\" but her success was four decades in the maki… [+1152 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "soompi"
+            },
+            "author": "C_Hong",
+            "title": "BTS's “Butter” Becomes Their 1st Song To Top Billboard Hot 100 For 3 Consecutive Weeks - soompi",
+            "description": "BTS’s “Butter” has set a new record on Billboard’s Hot 100 chart! On June 14 local time, Billboard revealed that “Butter” had topped the Hot 100—Billboard’s weekly ranking of the most popular songs in the United States—for the third week in a row. The song, w…",
+            "url": "https://www.soompi.com/article/1474656wpp/btss-butter-becomes-their-1st-song-to-top-billboard-hot-100-for-3-consecutive-weeks",
+            "urlToImage": "https://6.viki.io/image/f5df6a616cfa43419c55d8a45a6e0ea5.jpeg?s=900x600&e=t",
+            "publishedAt": "2021-06-14T18:04:38Z",
+            "content": "BTSs Butter has set a new record on Billboards Hot 100 chart!\r\nOn June 14 local time, Billboard revealed that Butter had topped the Hot 100Billboards weekly ranking of the most popular songs in the U… [+1628 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Page Six"
+            },
+            "author": "Chelsea Hirsch",
+            "title": "Hulu doc raises questions of what Erika Jayne knew about Tom Girardi - Page Six",
+            "description": "Did the “RHOBH” star know what her lawyer husband was allegedly up to?",
+            "url": "https://pagesix.com/2021/06/14/hulu-doc-questions-what-erika-jayne-knew-about-tom-girardi/",
+            "urlToImage": "https://pagesix.com/wp-content/uploads/sites/3/2021/06/Erika-Jayne-Girardi.jpg?quality=90&strip=all&w=1200",
+            "publishedAt": "2021-06-14T18:01:00Z",
+            "content": "“How Many F–ks” did Erika Jayne give about Tom Girardi’s legal affairs?\r\nThe star of The Real Housewives of Beverly Hills, 49, and her estranged husband, now-disgraced lawyer Girardi, 82, are the sub… [+1714 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Deadline"
+            },
+            "author": "Peter White",
+            "title": "‘Perfect Strangers’: Robin Thede & London Hughes To Lead Reboot Of ‘80s Comedy In The Works At HBO Max - Deadline",
+            "description": "Perfect Strangers, the 1980s sitcom starring Mark Linn-Baker and Bronson Pinchot, is the latest classic comedy to get a reboot – with Robin Thede and London Hughes set as leads. The project, which is in development as a series at HBO Max, will be written by A…",
+            "url": "https://deadline.com/2021/06/perfect-strangers-robin-thede-london-hughes-reboot-80s-comedy-hbo-max-1234774772/",
+            "urlToImage": "https://deadline.com/wp-content/uploads/2021/06/pjimage-14.jpg?w=1024",
+            "publishedAt": "2021-06-14T18:00:00Z",
+            "content": "Perfect Strangers, the 1980s sitcom starring Mark Linn-Baker and Bronson Pinchot, is the latest classic comedy to get a reboot – with Robin Thede and London Hughes set as leads.\r\nThe project, which i… [+1988 chars]"
+        },
+        {
+            "source": {
+                "id": "google-news",
+                "name": "Google News"
+            },
+            "author": null,
+            "title": "Meghan Markle's Dad Claims Oprah \"Took Advantage\" of Prince Harry | Daily Pop | E! News - E! News",
+            "description": null,
+            "url": "https://news.google.com/__i/rss/rd/articles/CBMiK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9LThQX1Z5cjhLYTDSAQA?oc=5",
+            "urlToImage": null,
+            "publishedAt": "2021-06-14T17:57:20Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "Kristyn Burtt",
+            "title": "Alex Rodriguez Leaving Newly Single Katie Holmes’ Apartment Building Is Such a Jennifer Lopez Move - Yahoo Entertainment",
+            "description": "Alex Rodriguez was not going to take the Bennifer 2.0 news lying down. He’s ready to take back the headlines with his own PR move that is straight out of the...",
+            "url": "https://www.yahoo.com/entertainment/alex-rodriguez-leaving-newly-single-175707029.html",
+            "urlToImage": "https://s.yimg.com/uu/api/res/1.2/XxOzfHE8lO2q7XyBgFUYOw--~B/aD0xMDgwO3c9MTQ0MDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/sheknows_79/182fac105d16a815a5dbc5b949e3e53a",
+            "publishedAt": "2021-06-14T17:57:07Z",
+            "content": "Alex Rodriguez was not going to take the Bennifer 2.0 news lying down. Hes ready to take back the headlines with his own PR move that is straight out of the Jennifer Lopez playbook. The former MLB pl… [+1863 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Daily Mail"
+            },
+            "author": "Ellen Coughlan, Ellie Phillips",
+            "title": "Elton John and his David Furnish to host virtual party to celebrate the LGBTQ+ community - Daily Mail",
+            "description": "YouTube Pride 2021 announced that Elton John, 74, and his husband David Furnish, 58, are set to host a star-studded virtual party on 25th June, to celebrate the LGBTQ+ community.",
+            "url": "https://www.dailymail.co.uk/tvshowbiz/article-9685197/Elton-John-David-Furnish-host-virtual-party-celebrate-LGBTQ-community.html",
+            "urlToImage": "https://i.dailymail.co.uk/1s/2021/06/14/18/44214469-0-image-a-14_1623691430370.jpg",
+            "publishedAt": "2021-06-14T17:35:04Z",
+            "content": "Many Pride Month celebrations are still on hold this year, with precautions still in place amid the Covid-19 pandemic.\r\nBut on Monday, YouTube Pride 2021 announced that Elton John, 74, and his husban… [+6501 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Page Six"
+            },
+            "author": "Eileen Reslen",
+            "title": "Ben Affleck and Jennifer Lopez make out at steamy PDA-packed dinner - Page Six",
+            "description": "Although we’re told they were joined J.Lo’s family for her sister Linda’s 50th birthday, the old flames appeared to only have eyes for each other.",
+            "url": "https://pagesix.com/2021/06/14/ben-affleck-jennifer-lopez-kiss-at-dinner-in-pda-packed-photos/",
+            "urlToImage": "https://pagesix.com/wp-content/uploads/sites/3/2021/06/Ben-Affleck-Jennifer-Lopez-index.jpg?quality=90&strip=all&w=1200",
+            "publishedAt": "2021-06-14T17:32:00Z",
+            "content": "Finally!\r\nReunited couple Jennifer Lopez and Ben Affleck were photographed kissing for the first time since reigniting their romance earlier this year.\r\nLopez, 51, and Affleck, 48, appeared mad about… [+3365 chars]"
+        },
+        {
+            "source": {
+                "id": "google-news",
+                "name": "Google News"
+            },
+            "author": null,
+            "title": "Beyonce Shares SWEET Birthday Message to Twins Rumi and Sir - Entertainment Tonight",
+            "description": null,
+            "url": "https://news.google.com/__i/rss/rd/articles/CBMiK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9SUV0ZGNscGdzV3PSAQA?oc=5",
+            "urlToImage": null,
+            "publishedAt": "2021-06-14T17:31:40Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "TheWrap"
+            },
+            "author": "Lindsey Ellefson",
+            "title": "Fox News’ Bill Hemmer Laments ‘Pitfalls’ of ‘Being White in America’ Amid Criticism of Tom Hanks - TheWrap",
+            "description": "Fox News aired a segment on an NPR piece calling for Hanks to transition from \"non-racist\" to \"anti-racist\"",
+            "url": "http://www.thewrap.com/bill-hemmer-fox-news-tom-hanks-anti-racist/",
+            "urlToImage": "https://www.thewrap.com/wp-content/uploads/2021/06/Screen-Shot-2021-06-14-at-1.03.58-PM.png",
+            "publishedAt": "2021-06-14T17:27:23Z",
+            "content": "Fox News’ Bill Hemmer paused a moment on the air Monday as he tried to describe “being white in America.” He ultimately landed on the conclusion that being a white American has “a lot of pitfalls.” \r… [+1609 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "hot97.com"
+            },
+            "author": null,
+            "title": "A$AP Rocky Pours His Heart Out Over Rihanna & Says He's 'Truly Blessed' - Hot97 - Hip Hop & R&B News",
+            "description": "Love is in the air! And A$AP Rocky isn’t afraid to show it! As reported on The Jasmine Brand, A$AP was doing a press run for his documentary, Stockholm Syndrome, at the Tribeca Film Festival. While chatting",
+            "url": "https://www.hot97.com/hip-hop-news/hot-news/aap-rocky-pours-his-heart-out-over-rihanna-says-hes-truly-blessed/",
+            "urlToImage": "https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/1300/2021/06/14125655/gettyimages-1191510911-594x594-copy.jpg",
+            "publishedAt": "2021-06-14T17:04:56Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Hollywood Reporter"
+            },
+            "author": "Lacey Rose",
+            "title": "Monica Lewinsky Inks Producing Deal With 20th TV (Exclusive) - Hollywood Reporter",
+            "description": "Monica Lewinsky has found her own Alt Ending. 20th Television has signed the Vanity Fair contributing editor and her aptly named production company to a first look producing deal. The news comes as Lewinsky is prepping the latest installment of the American C…",
+            "url": "https://www.hollywoodreporter.com/tv/tv-news/monica-lewinsky-inks-producing-deal-with-20th-tv-exclusive-1234967358/",
+            "urlToImage": "https://www.hollywoodreporter.com/wp-content/uploads/2021/06/headshot_169_template-copy-8.jpg?w=1024",
+            "publishedAt": "2021-06-14T17:00:55Z",
+            "content": "Monica Lewinsky has found her own Alt Ending.\r\n20th Television has signed the Vanity Fair contributing editor and her aptly named production company to a first look producing deal. The news comes as … [+2551 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Page Six"
+            },
+            "author": "Lauren Cox",
+            "title": "Kate Middleton calls Prince Charles 'Grandpa' during royal family outing - Page Six",
+            "description": "The Duchess of Cambridge seemed to have a slip of the tongue during Friday’s G7 reception.",
+            "url": "https://pagesix.com/2021/06/14/kate-middleton-calls-prince-charles-grandpa-at-g7-reception/",
+            "urlToImage": "https://pagesix.com/wp-content/uploads/sites/3/2021/06/kate-middleton-prince-charles-92.jpg?quality=90&strip=all&w=1200",
+            "publishedAt": "2021-06-14T16:18:00Z",
+            "content": "That’s future King Grandpa to you, Duchess.\r\nKate Middleton seemed to have a slip of the tongue during a royal family outing on Friday, calling Prince Charles Grandpa in public.\r\nA lip reader told th… [+1759 chars]"
+        }
+    ]
+}

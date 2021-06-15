@@ -10,7 +10,7 @@ import { Articles } from '../../core/interfaces/news-response';
 export class HeaderComponent implements OnInit {
 
   @Input() title: string  = '';
-  @Input() showBackButton: string = '';
+  @Input() showBackButton: boolean = true;
   @Input() segments: Array<Segment>;
   @Input() showSegment: boolean
   @Output() selectedSegment = new EventEmitter();

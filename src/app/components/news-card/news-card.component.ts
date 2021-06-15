@@ -92,7 +92,7 @@ export class NewsCardComponent implements OnInit {
     return value;
   }
 
-  async showOptions(t) {
+  async showOptions() {
     const actionSheet = await this.actionSheet.create({
       header: 'Options',
       cssClass: 'my-custom-class',
