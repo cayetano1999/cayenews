@@ -7,7 +7,7 @@ import { ToastControllerService } from 'src/app/core/services/ionic-components/t
 import { Storage } from '@ionic/storage'
 import { DataLocalService } from 'src/app/core/services/data-local/data-local.service';
 import { AlertControllerService } from 'src/app/core/services/ionic-components/alert-controller.service';
-import { ActionSheetController } from '@ionic/angular';
+import { ActionSheetController, Platform } from '@ionic/angular';
 import { UserCN } from 'src/app/core/models/user.model';
 import { Router } from '@angular/router';
 
@@ -30,7 +30,7 @@ export class NewsCardComponent implements OnInit {
   @Input() showMessage: boolean;
   isUser: boolean;
 
-  constructor(private router: Router, private actionSheet: ActionSheetController, private iab: InAppBrowser, private socialShared: SocialSharing, private toastService: ToastControllerService, private dataLocalService: DataLocalService, private alertService: AlertControllerService) { }
+  constructor(private platform: Platform, private router: Router, private actionSheet: ActionSheetController, private iab: InAppBrowser, private socialShared: SocialSharing, private toastService: ToastControllerService, private dataLocalService: DataLocalService, private alertService: AlertControllerService) { }
 
 
   async ngOnInit() {
@@ -40,10 +40,10 @@ export class NewsCardComponent implements OnInit {
     debugger;
 
     this.user = await this.dataLocalService.getItem('user');
-    if(this.user){
+    if (this.user) {
       this.isUser = true;
     }
-    else{
+    else {
       this.isUser = false;
       this.router.navigate(['./home']);
     }
@@ -59,11 +59,33 @@ export class NewsCardComponent implements OnInit {
   }
 
   shared(item: Articles) {
-    this.socialShared.share(item.title, item.source.name, '', item.url).then(() => {
-      this.toastService.showToastSuccess('News has been shared successfully');
-    }).catch(() => {
-      this.toastService.showToastError('Error while sharing news');
-    });
+    this.sharedNews(item);
+
+  }
+
+  sharedNews(item: Articles) {
+
+    if (this.platform.is('cordova')) {
+      this.socialShared.share(item.title, item.source.name, '', item.url).then(() => {
+        this.toastService.showToastSuccess('News has been shared successfully');
+      }).catch(() => {
+        this.toastService.showToastError('Error while sharing news');
+      });
+    }
+    else{
+      if (navigator.share) {
+        navigator.share({
+          title: item.title,
+          text: item.description,
+          url: item.url,
+        })
+        
+        .then(() => this.toastService.showToastSuccess('News has been shared successfully') )
+          .catch((error) => this.toastService.showToastError('This platform do not support share'));
+      }
+    }
+
+
   }
 
   async addToFavorite(item: Articles) {
